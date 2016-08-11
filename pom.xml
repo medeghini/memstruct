@@ -5,7 +5,7 @@
 	<artifactId>com.nextbreakpoint.memstruct</artifactId>
 	<version>1.7.0</version>
 	<packaging>jar</packaging>
-	<name>Memstruct</name>
+	<name>MemStruct</name>
 	<description>MemStruct is a Java library that provides a simple implementation of a basic assembly structure, in order to manipulate and access labelled fields at low-level</description>
 	<url>https://github.com/nextbreakpoint/memstruct</url>
 	<licenses>
