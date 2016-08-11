@@ -12,21 +12,18 @@
  * Additional code - Padding support
  * Additional code - Exceptions support
  * Additional code - ds.x accessors
- * Additional code - Extensive test main()
+ * Additional code - Extensive tests
  * Copyright (c) 2001-2016 by Andrea Medeghini
  *
- * This library is free software; you can redistribute it and/or modify it 
- * under the terms of the GNU Lesser General Public License as published 
- * by the Free Software Foundation; either version 2.1 of the License, 
- * or (at your option) any later version.
+ * This file is part of MemStruct.
  *
- * This library is distributed in the hope that it will be useful,
+ * MemStruct is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License 
- * along with this library; if not, write to the Free Software Foundation, 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with MemStruct; if not, write to the Free Software Foundation,
  * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
  */
 package com.nextbreakpoint.memstruct;
