@@ -20,23 +20,20 @@
 package com.nextbreakpoint.memstruct;
 
 /**
- * Simple extension of class java.lang.Exception. 
+ * Simple extension of class java.lang.Exception.
  */
-public class MemStructException extends Exception
-{
-	/**
-	 * Create new instance. 
-	 */
-	public MemStructException()
-	{
-		super("memstruct exception !");
-	}
+public class MemStructException extends Exception {
+    /**
+     * Create new instance.
+     */
+    public MemStructException() {
+        super("internal error");
+    }
 
-	/**
-	 * Create new instance with specified description. 
-	 */
-	public MemStructException(String description)
-	{
-		super(description);
-	}
+    /**
+     * Create new instance with specified description.
+     */
+    public MemStructException(String description) {
+        super(description);
+    }
 }
