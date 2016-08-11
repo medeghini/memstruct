@@ -6,7 +6,7 @@
 	<version>1.7.0</version>
 	<packaging>jar</packaging>
 	<name>Memstruct</name>
-	<description>MemStruct is a Java library that gives a simple implementation of a basic assembly structure, in order to manipulate and access labelled fields at low-level</description>
+	<description>MemStruct is a Java library that provides a simple implementation of a basic assembly structure, in order to manipulate and access labelled fields at low-level</description>
 	<url>https://github.com/nextbreakpoint/memstruct</url>
 	<licenses>
 		<license>
