@@ -9,6 +9,7 @@ MemStruct is a Java library that gives a simple implementation of a basic assemb
 ## License
 
 Copyright (C) 2001-2003 Michele Puccini
+
 Copyright (C) 2001-2016 Andrea Medeghini
 
 Memstruct is free software; you can redistribute it and/or modify it 
