@@ -34,6 +34,7 @@ public class MemStructException extends Exception {
 
     /**
      * Create new instance with specified description.
+     * @param description the description
      */
     public MemStructException(String description) {
         super(description);

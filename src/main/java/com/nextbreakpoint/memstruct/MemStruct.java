@@ -90,6 +90,11 @@ public final class MemStruct {
     /**
      * Build a memstuct. Only the constructor does. Just for security reasons,
      * we want to avoid that someone changes the memstruct on the fly.
+     * @param definition the structure definition
+     * @param longsize the size of long integer
+     * @param ordering the bytes ordering
+     * @param padding the bytes padding
+     * @throws MemStructException if definition contains an error
      */
     public MemStruct(String definition, LongSize longsize, BytesOrdering ordering, BytesPadding padding) throws MemStructException {
         mdataLongSize = longsize;
@@ -109,6 +114,7 @@ public final class MemStruct {
 
     /**
      * Returns the contents of the struct as an array of bytes.
+     * @return the structure bytes
      */
     public byte[] getBytes() {
         return mdata;
@@ -116,6 +122,9 @@ public final class MemStruct {
 
     /**
      * Gets the offset in bytes of a given label.
+     * @param label the label
+     * @return the offset
+     * @throws MemStructException if label not found
      */
     public long getOffset(String label) throws MemStructException {
         StructItem si = findItem(label);
@@ -125,6 +134,9 @@ public final class MemStruct {
 
     /**
      * Gets the size of the given struct item, padding excluded.
+     * @param label the label
+     * @return the size
+     * @throws MemStructException if label not found
      */
     public long getSize(String label) throws MemStructException {
         StructItem si = findItem(label);
@@ -301,6 +313,9 @@ public final class MemStruct {
 
     /**
      * Sets a value into the struct, given the label.
+     * @param label the label
+     * @param value the value
+     * @throws MemStructException if label not found
      */
     public void set(String label, long value) throws MemStructException {
         StructItem si = findItem(label);
@@ -315,6 +330,10 @@ public final class MemStruct {
 
     /**
      * Sets a value into the struct, given the label and the offset relative to the label.
+     * @param label the label
+     * @param value the value
+     * @param offset the offset
+     * @throws MemStructException if label not found
      */
     public void set(String label, long value, int offset) throws MemStructException {
         StructItem si = findItem(label);
@@ -336,6 +355,9 @@ public final class MemStruct {
 
     /**
      * Gets a value from the struct, given the label.
+     * @param label the label
+     * @return the value
+     * @throws MemStructException if label not found
      */
     public long get(String label) throws MemStructException {
         StructItem si = findItem(label);
@@ -364,6 +386,10 @@ public final class MemStruct {
 
     /**
      * Gets a value from the struct, given the label and the offset relative to the label.
+     * @param label the label
+     * @param offset the offset
+     * @return the value
+     * @throws MemStructException if label not found
      */
     public long get(String label, int offset) throws MemStructException {
         StructItem si = findItem(label);
@@ -392,7 +418,8 @@ public final class MemStruct {
     }
 
     /**
-     * Sets the size of the whole struct (bytes) padding included.
+     * Sets the size of the whole struct padding included.
+     * @return the size of structure in bytes
      */
     public int sizeOf() {
         return mdataSize;
@@ -400,6 +427,7 @@ public final class MemStruct {
 
     /**
      * Dumps the struct to a human readable text string.
+     * @return human readable text string
      */
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -413,7 +441,9 @@ public final class MemStruct {
     }
 
     /**
-     * Copies an array of bytes into the struct. Returns the number of bytes copied.
+     * Copies an array of bytes into the struct.
+     * @param data array of bytes to copy
+     * @return the number of bytes copied
      */
     public int setBytes(byte[] data) {
         int size = Math.min(data.length, mdata.length);
@@ -425,6 +455,9 @@ public final class MemStruct {
 
     /**
      * Gets the string at the given label.
+     * @param label the label
+     * @return the string
+     * @throws MemStructException if label not found
      */
     public String getString(String label) throws MemStructException {
         StructItem si = findItem(label);
@@ -443,6 +476,9 @@ public final class MemStruct {
 
     /**
      * Gets the "C" string at the given label.
+     * @param label the label
+     * @return the C string
+     * @throws MemStructException if label not found
      */
     public String getCString(String label) throws MemStructException {
         String s = getString(label);
@@ -462,6 +498,10 @@ public final class MemStruct {
 
     /**
      * Sets a string at the given label. Returns the number of bytes copied.
+     * @param label the label
+     * @param data the data
+     * @return the number of bytes copied
+     * @throws MemStructException if label not found
      */
     public int setString(String label, String data) throws MemStructException {
         StructItem si = findItem(label);
